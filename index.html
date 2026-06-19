@@ -151,8 +151,8 @@
   }
 
   /* ---------- photo banner ---------- */
-  .photo-banner{position:relative;height:clamp(280px,38vw,440px);overflow:hidden;}
-  .photo-banner img{width:100%;height:100%;object-fit:cover;}
+  .photo-banner{position:relative;height:clamp(300px,40vw,460px);overflow:hidden;background:var(--navy-deep);}
+  .photo-banner img{width:100%;height:100%;object-fit:contain;display:block;}
   .photo-banner .overlay{
     position:absolute;inset:0;
     background:linear-gradient(180deg, rgba(11,22,34,.18) 0%, rgba(11,22,34,.82) 100%);
@@ -178,6 +178,7 @@
   .service-card .tag{position:absolute;top:0;right:0;background:var(--navy);color:var(--white);
     font-family:var(--display);font-size:11px;letter-spacing:.1em;padding:6px 14px;border-radius:0 0 0 4px;}
   .service-card svg{width:54px;height:34px;margin-bottom:22px;}
+  .service-card .card-photo{width:100%;height:170px;object-fit:cover;border-radius:4px;margin-bottom:22px;display:block;}
   .service-card h3{margin-bottom:12px;}
   .service-card p{font-size:15px;}
   @media (max-width:760px){.service-grid{grid-template-columns:1fr;}}
@@ -213,7 +214,9 @@
     background:linear-gradient(120deg, var(--orange) 0%, var(--orange-dim) 100%);
     color:var(--navy-deep);
   }
-  .careers-inner{display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap;}
+  .careers-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;}
+  .careers-photo img{width:100%;height:280px;object-fit:cover;border-radius:6px;display:block;box-shadow:0 18px 40px rgba(11,22,34,.22);}
+  @media (max-width:760px){.careers-inner{grid-template-columns:1fr;} .careers-photo{order:-1;}}
   .careers h2{max-width:560px;}
   .careers p{color:rgba(11,22,34,.78);max-width:480px;margin-top:14px;font-size:16px;}
   .careers .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;}
@@ -244,14 +247,20 @@
 <header>
   <div class="wrap nav">
     <a href="#top" class="brand">
-      <span class="brand-mark">PC</span>
-      <span class="brand-name">PREMIUM CARRIERS<span>LLC &middot; ELMHURST, IL</span></span>
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 20" width="22" height="14" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="4" width="14" height="9" rx="1" fill="#FFFFFF"/>
+          <path d="M15 5h6l5 5v3H15z" fill="#FFFFFF"/>
+          <circle cx="7" cy="15.5" r="2.3" fill="#0B1622"/>
+          <circle cx="23" cy="15.5" r="2.3" fill="#0B1622"/>
+        </svg>
+      </span>
+      <span class="brand-name">PREMIUM CARRIERS LLC<span>ELMHURST, IL</span></span>
     </a>
     <nav class="links" id="navLinks">
       <a href="#services">Services</a>
       <a href="#coverage">Coverage</a>
       <a href="#why">Why Us</a>
-      <a href="#careers">Careers</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="header-cta">
@@ -306,7 +315,7 @@
     <div class="service-grid">
       <div class="service-card reveal">
         <span class="tag">Dry Van</span>
-        <svg viewBox="0 0 64 40" fill="none" stroke="var(--navy)" stroke-width="2"><rect x="2" y="6" width="44" height="26" rx="2"/><path d="M46 18h10l6 8v6H46z"/><circle cx="16" cy="34" r="4" fill="var(--navy)"/><circle cx="50" cy="34" r="4" fill="var(--navy)"/></svg>
+        <img class="card-photo" src="https://images.unsplash.com/photo-1695222833131-54ee679ae8e5?auto=format&fit=crop&w=900&q=70" alt="White dry van semi-truck driving on a highway">
         <h3>Dry Van</h3>
         <p>General freight, palletized loads, and retail or industrial goods &mdash; hauled in clean, weather-tight trailers and handled the same way every time.</p>
       </div>
@@ -385,6 +394,9 @@
         <a class="btn btn-dark" href="tel:+17866740385">Call (786) 674-0385</a>
       </div>
     </div>
+    <div class="careers-photo">
+      <img src="https://images.unsplash.com/photo-1574757974346-45bae947d89a?auto=format&fit=crop&w=900&q=70" alt="Truck driver standing in front of a freight truck">
+    </div>
   </div>
 </section>
 
@@ -410,7 +422,6 @@
     </div>
     <div class="bottom-bar">
       <span>&copy; 2026 Premium Carriers LLC. All rights reserved.</span>
-      <span>MC# / DOT# &mdash; add here</span>
     </div>
   </div>
 </footer>
