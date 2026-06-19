@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Carriers LLC | Dry Van &amp; Reefer Trucking — Elmhurst, IL</title>
+<meta name="description" content="Premium Carriers LLC hauls dry van and reefer freight across all 48 states. 24/7 dispatch, Elmhurst, IL. Now hiring CDL-A drivers.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230B1622'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='700' font-size='26' fill='%23FF6A13' text-anchor='middle'%3EPC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#0B1622;
+    --navy:#102B40;
+    --steel:#4C6377;
+    --steel-light:#7C92A3;
+    --orange:#FF6A13;
+    --orange-dim:#E55F0F;
+    --concrete:#F2F3F5;
+    --white:#FFFFFF;
+    --ink:#13181E;
+    --line:#DADDE1;
+    --line-dark:rgba(255,255,255,0.14);
+    --maxw:1180px;
+    --display: 'Oswald', Arial, sans-serif;
+    --body: 'Inter', -apple-system, Segoe UI, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    font-family:var(--display);
+    font-size:13px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  h1,h2,h3{font-family:var(--display);text-transform:uppercase;letter-spacing:.01em;line-height:1.08;}
+  h2{font-size:clamp(28px,4vw,42px);font-weight:600;}
+  h3{font-size:18px;font-weight:600;letter-spacing:.04em;}
+  p{color:var(--steel);}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:var(--display);
+    font-size:14px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;
+    padding:15px 26px;
+    border-radius:3px;
+    transition:transform .15s ease, background .15s ease, box-shadow .15s ease;
+    border:1px solid transparent;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--orange);color:var(--navy-deep);}
+  .btn-primary:hover{background:var(--orange-dim);transform:translateY(-1px);}
+  .btn-ghost{border-color:var(--line-dark);color:var(--white);}
+  .btn-ghost:hover{background:rgba(255,255,255,.08);}
+  .btn-dark{border-color:var(--navy);color:var(--navy);}
+  .btn-dark:hover{background:var(--navy);color:var(--white);}
+  *:focus-visible{outline:3px solid var(--orange);outline-offset:2px;}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(11,22,34,.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line-dark);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    height:76px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;color:var(--white);}
+  .brand-mark{
+    width:36px;height:36px;border-radius:4px;background:var(--orange);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--display);font-weight:700;font-size:14px;color:var(--navy-deep);
+    flex-shrink:0;
+  }
+  .brand-name{font-family:var(--display);font-size:17px;letter-spacing:.04em;font-weight:600;}
+  .brand-name span{display:block;font-size:10px;letter-spacing:.18em;color:var(--steel-light);font-weight:500;}
+  nav.links{display:flex;align-items:center;gap:34px;}
+  nav.links a{
+    color:var(--white);font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+    font-family:var(--display);font-weight:500;opacity:.85;
+  }
+  nav.links a:hover{opacity:1;color:var(--orange);}
+  .header-cta{display:flex;align-items:center;gap:18px;}
+  .phone-link{color:var(--white);font-family:var(--display);font-size:15px;letter-spacing:.03em;font-weight:600;display:none;}
+  .menu-btn{display:none;background:none;border:none;color:var(--white);cursor:pointer;padding:8px;}
+  .menu-btn svg{width:24px;height:24px;}
+
+  @media (max-width:860px){
+    nav.links{position:fixed;inset:76px 0 0 0;background:var(--navy-deep);flex-direction:column;
+      justify-content:flex-start;padding:40px 24px;gap:28px;transform:translateX(100%);
+      transition:transform .25s ease;}
+    nav.links.open{transform:translateX(0);}
+    nav.links a{font-size:18px;}
+    .menu-btn{display:block;}
+    .phone-link{display:none !important;}
+  }
+  @media (min-width:861px){ .phone-link{display:inline-flex;} }
+
+  /* ---------- lane divider ---------- */
+  .lane{
+    height:14px;background:var(--navy-deep);
+    background-image:repeating-linear-gradient(90deg, var(--orange) 0 28px, transparent 28px 56px);
+    background-position:center;background-repeat:repeat-x;background-size:56px 3px;
+    background-position-y:center;
+    opacity:.9;
+  }
+
+  /* ---------- hero ---------- */
+  /* Hero background photo: free to use under the Unsplash License, photo by JunBo Sun */
+  .hero{
+    background:
+      radial-gradient(circle at 80% 0%, rgba(255,106,19,.14), transparent 45%),
+      linear-gradient(180deg, rgba(11,22,34,.92) 0%, rgba(11,22,34,.96) 65%, var(--navy-deep) 100%),
+      url('https://images.unsplash.com/photo-1635681463939-dc861a9a42c9?auto=format&fit=crop&w=2000&q=70') center 58%/cover no-repeat;
+    color:var(--white);
+    padding:96px 0 84px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:repeating-linear-gradient(115deg, rgba(255,255,255,.035) 0 2px, transparent 2px 64px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:end;}
+  .hero h1{font-size:clamp(34px,5.6vw,64px);font-weight:700;margin:18px 0 22px;max-width:680px;}
+  .hero h1 em{font-style:normal;color:var(--orange);}
+  .hero p.lead{font-size:17px;max-width:480px;color:var(--steel-light);margin-bottom:34px;}
+  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap;}
+  .stat-rail{display:flex;flex-direction:column;gap:18px;border-left:1px solid var(--line-dark);padding-left:28px;}
+  .stat{display:flex;flex-direction:column;}
+  .stat .num{font-family:var(--display);font-size:30px;font-weight:700;color:var(--orange);letter-spacing:.02em;}
+  .stat .label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel-light);}
+  @media (max-width:860px){
+    .hero-inner{grid-template-columns:1fr;}
+    .stat-rail{flex-direction:row;border-left:none;border-top:1px solid var(--line-dark);padding:24px 0 0;gap:28px;flex-wrap:wrap;}
+  }
+
+  /* ---------- photo banner ---------- */
+  .photo-banner{position:relative;height:clamp(280px,38vw,440px);overflow:hidden;}
+  .photo-banner img{width:100%;height:100%;object-fit:cover;}
+  .photo-banner .overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(11,22,34,.18) 0%, rgba(11,22,34,.82) 100%);
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:40px;
+  }
+  .photo-banner .overlay .eyebrow{color:var(--orange);margin-bottom:8px;display:block;}
+  .photo-banner .overlay h2{color:var(--white);font-size:clamp(24px,4vw,38px);max-width:640px;}
+
+  /* ---------- section shell ---------- */
+  section{padding:88px 0;}
+  .section-head{max-width:620px;margin-bottom:46px;}
+  .section-head .eyebrow{color:var(--orange);margin-bottom:10px;display:block;}
+  .section-head p{margin-top:14px;font-size:16px;}
+  .light{background:var(--concrete);}
+
+  /* ---------- services ---------- */
+  .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  .service-card{
+    background:var(--white);border:1px solid var(--line);border-radius:4px;
+    padding:36px;position:relative;overflow:hidden;
+  }
+  .service-card .tag{position:absolute;top:0;right:0;background:var(--navy);color:var(--white);
+    font-family:var(--display);font-size:11px;letter-spacing:.1em;padding:6px 14px;border-radius:0 0 0 4px;}
+  .service-card svg{width:54px;height:34px;margin-bottom:22px;}
+  .service-card h3{margin-bottom:12px;}
+  .service-card p{font-size:15px;}
+  @media (max-width:760px){.service-grid{grid-template-columns:1fr;}}
+
+  /* ---------- coverage ---------- */
+  .coverage{background:var(--navy-deep);color:var(--white);}
+  .coverage .section-head p{color:var(--steel-light);}
+  .coverage-grid{display:grid;grid-template-columns:.9fr 1.4fr;gap:56px;align-items:center;}
+  .coverage-stat{font-family:var(--display);font-weight:700;font-size:clamp(70px,11vw,128px);color:var(--orange);line-height:.85;}
+  .coverage-stat + .label{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel-light);margin-top:6px;}
+  .route{width:100%;height:auto;}
+  .route .dash{stroke:var(--steel-light);stroke-width:2;stroke-dasharray:8 9;}
+  .route .stop circle{fill:var(--navy-deep);stroke:var(--orange);stroke-width:2.5;}
+  .route .stop.end circle{fill:var(--orange);stroke:var(--orange);}
+  .route text{font-family:var(--display);font-size:11px;letter-spacing:.08em;fill:var(--steel-light);text-transform:uppercase;}
+  @media (max-width:860px){.coverage-grid{grid-template-columns:1fr;gap:36px;}}
+
+  /* ---------- why us ---------- */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);}
+  .why-item{padding:32px 26px 0;border-right:1px solid var(--line);min-height:190px;}
+  .why-item:last-child{border-right:none;}
+  .why-item .mark{width:30px;height:3px;background:var(--orange);margin-bottom:18px;}
+  .why-item h3{margin-bottom:10px;font-size:16px;}
+  .why-item p{font-size:14px;}
+  @media (max-width:900px){
+    .why-grid{grid-template-columns:1fr 1fr;}
+    .why-item{border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:auto;padding-bottom:28px;}
+  }
+  @media (max-width:560px){.why-grid{grid-template-columns:1fr;}}
+
+  /* ---------- careers ---------- */
+  .careers{
+    background:linear-gradient(120deg, var(--orange) 0%, var(--orange-dim) 100%);
+    color:var(--navy-deep);
+  }
+  .careers-inner{display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap;}
+  .careers h2{max-width:560px;}
+  .careers p{color:rgba(11,22,34,.78);max-width:480px;margin-top:14px;font-size:16px;}
+  .careers .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;}
+  .careers .btn-dark{border-color:var(--navy-deep);}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--navy-deep);color:var(--steel-light);padding:56px 0 28px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;border-bottom:1px solid var(--line-dark);padding-bottom:36px;margin-bottom:24px;}
+  .foot-grid .brand-name{color:var(--white);}
+  .foot-grid p{font-size:14px;color:var(--steel-light);margin-top:14px;max-width:300px;}
+  .foot-col h4{font-family:var(--display);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--white);margin-bottom:14px;}
+  .foot-col a, .foot-col li{font-size:14px;margin-bottom:8px;display:block;color:var(--steel-light);}
+  .foot-col a:hover{color:var(--orange);}
+  .bottom-bar{display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:8px;}
+  @media (max-width:760px){.foot-grid{grid-template-columns:1fr;}}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <span class="brand-mark">PC</span>
+      <span class="brand-name">PREMIUM CARRIERS<span>LLC &middot; ELMHURST, IL</span></span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#why">Why Us</a>
+      <a href="#careers">Careers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="phone-link" href="tel:+17866740385">(786) 674-0385</a>
+      <a class="btn btn-primary" href="tel:+17866740385">Call Dispatch</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow" style="color:var(--orange)">Dry Van &amp; Reefer Freight &middot; All 48 States</span>
+      <h1>Freight moved right, <em>coast to coast.</em></h1>
+      <p class="lead">Premium Carriers LLC runs dry van and reefer freight out of Elmhurst, Illinois, with dispatch on the line around the clock. No excuses, no guesswork &mdash; just loads delivered on time.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="tel:+17866740385">Call Dispatch 24/7</a>
+        <a class="btn btn-ghost" href="#services">See What We Haul</a>
+      </div>
+    </div>
+    <div class="stat-rail">
+      <div class="stat"><span class="num">48</span><span class="label">States Covered</span></div>
+      <div class="stat"><span class="num">24/7</span><span class="label">Live Dispatch</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">Trailer Types: Dry Van + Reefer</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="lane"></div>
+
+<!-- Photo: free to use under the Unsplash License, photo by Robson Hatsukami Morgan -->
+<section class="photo-banner reveal">
+  <img src="https://images.unsplash.com/photo-1473445730015-841f29a9490b?auto=format&fit=crop&w=2000&q=70" alt="Semi-truck hauling freight on a U.S. interstate highway">
+  <div class="overlay">
+    <span class="eyebrow">On The Road</span>
+    <h2>Every Load, Every Lane, On Time</h2>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Haul</span>
+      <h2>Built for two trailer types, done well</h2>
+      <p>We keep our equipment focused so every load gets the attention it needs &mdash; no spreading thin across freight we don't know.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card reveal">
+        <span class="tag">Dry Van</span>
+        <svg viewBox="0 0 64 40" fill="none" stroke="var(--navy)" stroke-width="2"><rect x="2" y="6" width="44" height="26" rx="2"/><path d="M46 18h10l6 8v6H46z"/><circle cx="16" cy="34" r="4" fill="var(--navy)"/><circle cx="50" cy="34" r="4" fill="var(--navy)"/></svg>
+        <h3>Dry Van</h3>
+        <p>General freight, palletized loads, and retail or industrial goods &mdash; hauled in clean, weather-tight trailers and handled the same way every time.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="tag">Reefer</span>
+        <svg viewBox="0 0 64 40" fill="none" stroke="var(--navy)" stroke-width="2"><rect x="2" y="6" width="44" height="26" rx="2"/><path d="M46 18h10l6 8v6H46z"/><circle cx="16" cy="34" r="4" fill="var(--navy)"/><circle cx="50" cy="34" r="4" fill="var(--navy)"/><path d="M8 16h10M8 22h10" stroke="var(--orange)"/></svg>
+        <h3>Reefer</h3>
+        <p>Temperature-controlled freight that can't wait &mdash; monitored from pickup to delivery so it arrives the way it left.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="coverage" id="coverage">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Coverage</span>
+      <h2>Coast to coast, every lane</h2>
+      <p>One call books the lane &mdash; no matter which corner of the country it runs to.</p>
+    </div>
+    <div class="coverage-grid">
+      <div class="reveal">
+        <div class="coverage-stat">48</div>
+        <div class="label">States, One Dispatch Line</div>
+      </div>
+      <svg class="route reveal" viewBox="0 0 760 110" xmlns="http://www.w3.org/2000/svg">
+        <line class="dash" x1="20" y1="55" x2="740" y2="55"/>
+        <g class="stop"><circle cx="20" cy="55" r="7"/><text x="20" y="84" text-anchor="middle">West</text></g>
+        <g class="stop"><circle cx="200" cy="55" r="7"/><text x="200" y="84" text-anchor="middle">Southwest</text></g>
+        <g class="stop"><circle cx="380" cy="55" r="7"/><text x="380" y="84" text-anchor="middle">Midwest</text></g>
+        <g class="stop"><circle cx="560" cy="55" r="7"/><text x="560" y="84" text-anchor="middle">South</text></g>
+        <g class="stop end"><circle cx="740" cy="55" r="8"/><text x="722" y="84" text-anchor="middle">East</text></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Us</span>
+      <h2>What shippers and drivers can count on</h2>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-item">
+        <div class="mark"></div>
+        <h3>On Time, Every Time</h3>
+        <p>Pickup and delivery windows are commitments, not estimates. We plan lanes to protect them.</p>
+      </div>
+      <div class="why-item">
+        <div class="mark"></div>
+        <h3>Dispatch That Never Sleeps</h3>
+        <p>A real person answers, day or night. No hold music, no runaround.</p>
+      </div>
+      <div class="why-item">
+        <div class="mark"></div>
+        <h3>Equipment Kept Road-Ready</h3>
+        <p>Trailers are inspected and maintained on a strict schedule, so breakdowns don't become someone else's problem.</p>
+      </div>
+      <div class="why-item">
+        <div class="mark"></div>
+        <h3>Safety &amp; Compliance First</h3>
+        <p>We run by the book on hours, inspections, and documentation &mdash; every load, every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="careers" id="careers">
+  <div class="wrap careers-inner reveal">
+    <div>
+      <span class="eyebrow">Now Hiring</span>
+      <h2 style="margin-top:10px;">CDL-A drivers wanted</h2>
+      <p>Premium Carriers LLC is growing and looking for drivers who take pride in the job. Steady dry van and reefer freight, dispatch that has your back, and a fleet kept in real shape.</p>
+      <div class="ctas">
+        <a class="btn btn-dark" href="tel:+17866740385">Call (786) 674-0385</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="brand-name" style="font-family:var(--display);font-size:18px;">PREMIUM CARRIERS LLC</span>
+        <p>Dry van and reefer trucking based in Elmhurst, Illinois, running freight across all 48 states.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:+17866740385">(786) 674-0385</a>
+        <span>Elmhurst, IL</span>
+        <span>Dispatch available 24/7</span>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#services">Services</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#careers">Careers</a>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <span>&copy; 2026 Premium Carriers LLC. All rights reserved.</span>
+      <span>MC# / DOT# &mdash; add here</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', false);
+  }));
+
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
